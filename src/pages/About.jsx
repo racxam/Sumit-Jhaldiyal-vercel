@@ -56,7 +56,10 @@ const About = () => {
       repeat={Infinity}
       style={{ fontSize: '1.5em', display: 'inline-block', fontFamily:"Monserrat",background: "linear-gradient(135deg, #0061ff, #60efff 160%)",
       webkitBackgroundClip: "text",
-      webkitTextFillColor: "transparent"}}
+      webkitTextFillColor: "transparent",
+      paddingBottom:"2%"
+
+    }}
       className='drop-shadow'
     />
 

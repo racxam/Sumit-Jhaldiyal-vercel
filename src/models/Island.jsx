@@ -39,7 +39,7 @@ export function Island({
       const clientX = event.touches ? event.touches[0].clientX : event.clientX;
       const delta = (clientX - lastX.current) / viewport.width;
 
-      islandRef.current.rotation.y += delta * 0.02 * Math.PI;
+      islandRef.current.rotation.y += delta * 0.09 * Math.PI;
 
       lastX.current = clientX;
       lastTouchX.current = clientX;
@@ -78,19 +78,19 @@ export function Island({
       islandRef.current.rotation.y += rotationSpeed.current;
     } else {
       const rotation = islandRef.current.rotation.y;
-      const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      const normalizedRotation = ((rotation % (2* Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+        case normalizedRotation >= 5.2 && normalizedRotation <= 5.85:
           setCurrentStage(4);
           break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+        case normalizedRotation >= 0.8&& normalizedRotation <= 1.5:
           setCurrentStage(3);
           break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+        case normalizedRotation >= 2 && normalizedRotation <= 2.6:
           setCurrentStage(2);
           break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+        case normalizedRotation >= 4 && normalizedRotation <= 4.75:
           setCurrentStage(1);
           break;
         default:

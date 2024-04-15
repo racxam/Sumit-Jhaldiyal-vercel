@@ -74,7 +74,7 @@ const About = () => {
       whileInView={{
         scale:1
       }}
-      >Introducing Sumit Kumar Jhaldiyal, a tech aficionado from the heart of Uttarakhand, India. In the ever-evolving field of Computer Science, Sumit is not just a student; he's a fervent devotee infusing zeal into each code snippet. Get ready for a journey where innovation and dedication converge under Sumit's tech-savvy guidance. </motion.p>
+      >Introducing Sumit Kumar Jhaldiyal, a tech aficionado from the heart of Uttarakhand, India. In the ever-evolving field of Computer Science, Sumit is not just a student; he's a fervent devotee infusing zeal into each code snippet. Get ready for a journey where innovation and dedication converge under Sumit's tech-savvy guidance. I feel Nikita is a very sweet girl with nice vibes </motion.p>
       </div>
       <div className='py-20 flex flex-col'>
       <motion.h3 className='subhead-text'

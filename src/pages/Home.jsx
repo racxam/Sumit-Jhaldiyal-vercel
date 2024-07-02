@@ -9,12 +9,12 @@ import Plane from '../models/Plane'
 import Homeinfo from '../components/Homeinfo'
 import summusic from '../assets/summusic.mp3'
 import { soundoff, soundon } from '../assets/icons'
-
-
+import { Helmet } from 'react-helmet-async'
 
 
 
 const Home = () => {
+  const canonicalUrl = `${window.location.origin}`;
   
 
   const [isRotating,setIsRotating]=useState(false);
@@ -64,6 +64,21 @@ const Home = () => {
   return (
     
    <section className='w-full h-screen relative'> 
+   <Helmet>
+        <title>Sumit Kumar Jhaldiyal</title>
+        <meta 
+          name="Home" 
+          content="Learn about Sumit Kumar Jhaldiyal, a tech aficionado from Uttarakhand, India. Discover his skills, educational background, and projects in computer science." 
+        />
+        <meta 
+          name="keywords" 
+          content="Sumit Kumar Jhaldiyal, web developer, Uttarakhand, India, computer science, tech enthusiast, CSS, Express, Git, GitHub, HTML, JavaScript, MongoDB, Java, Material-UI, Linux, Node.js, React, SQL, Python, Tailwind CSS, TypeScript, C#, C++, Chandigarh University, MERN stack, product recommendation system, library management system, student management system, hackathon, Flipkart Grid, Google certifications" 
+        />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
+
+
+
    <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
     {currentStage && <Homeinfo currentStage= {currentStage}/>}
   </div>

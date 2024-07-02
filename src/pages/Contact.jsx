@@ -6,11 +6,13 @@ import Loader from '../components/Loader';
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert'
 import{ motion} from 'framer-motion'
+import { Helmet } from 'react-helmet-async';
 
 import { TypeAnimation } from 'react-type-animation';
 
 
 const Contact = () => {
+  const canonicalUrl = `${window.location.origin}/contact`;
   const formRef=useRef(null); 
   const [isLoading,setIsLoading]=useState(false);
   const [currentAnimation,setCurrentAnimation]=useState('idle')
@@ -60,6 +62,24 @@ const Contact = () => {
   }
   return (
    <section className='flex lg:flex-row flex-col max-container h-[100vh] fonty'>
+    <Helmet>
+        <title>Contact | Sumit Kumar Jhaldiyal</title>
+        <meta
+          name="description"
+          content="Contact Sumit Kumar Jhaldiyal for inquiries, collaborations, or any questions you may have."
+        />
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Contact Sumit Jhaldiyal" />
+        <meta
+          property="og:description"
+          content="Contact Sumit Kumar Jhaldiyal for inquiries, collaborations, or any questions you may have."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://example.com/contact" /> {/* Replace with your contact page URL */}
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
 
  
     {alert.show && <Alert {...alert}/>}

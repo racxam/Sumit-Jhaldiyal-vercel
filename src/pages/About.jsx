@@ -6,11 +6,13 @@ import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import { TypeAnimation } from 'react-type-animation';
 import {motion,useInView} from 'framer-motion'
+import { Helmet } from 'react-helmet-async';
 
 
 
 
 const About = () => {
+  const canonicalUrl = `${window.location.origin}/about`;
   const aniref=useRef(null);
   const isInView=useInView(aniref,{once:true});
   const cardVariant={
@@ -24,7 +26,20 @@ const About = () => {
     }
   }
   return (
+
     <section className='max-container'>
+      <Helmet>
+        <title>About | Sumit Kumar Jhaldiyal</title>
+        <meta 
+          name="description" 
+          content="Learn about Sumit Kumar Jhaldiyal, a tech aficionado from Uttarakhand, India. Discover his skills, educational background, and projects in computer science." 
+        />
+        <meta 
+          name="keywords" 
+          content="Sumit Kumar Jhaldiyal, web developer, Uttarakhand, India, computer science, tech enthusiast, CSS, Express, Git, GitHub, HTML, JavaScript, MongoDB, Java, Material-UI, Linux, Node.js, React, SQL, Python, Tailwind CSS, TypeScript, C#, C++, Chandigarh University, MERN stack, product recommendation system, library management system, student management system, hackathon, Flipkart Grid, Google certifications" 
+        />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       
       <motion.h1
       initial={{

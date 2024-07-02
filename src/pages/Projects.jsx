@@ -5,8 +5,11 @@ import { arrow } from '../assets/icons'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
 import { motion,useInView } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 
-const Projects = () => {
+const Projects = () => {  
+  const canonicalUrl = `${window.location.origin}/about`;
+
   const aniref=useRef(null);
   const isInView=useInView(aniref,{once:true});
 
@@ -54,6 +57,23 @@ const Projects = () => {
     initial="hidden"
     whileInView="visible"
     >
+         <Helmet>
+        <title>Projects | Sumit Kumar Jhaldiyal</title>
+        <meta
+          name="description"
+          content="Explore Sumit Kumar Jhaldiyal's diverse projects, each showcasing unique skills and creativity in tech and innovation."
+        
+        />
+        <link rel="canonical" href={canonicalUrl} />
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Sumit Jhaldiyal's Projects" />
+        <meta property="og:description" content="Explore diverse tech projects by Sumit Kumar Jhaldiyal." />
+        <meta property="og:image" content="src/assets/favicon.ico" /> {/* Replace with your project image URL */}
+        <meta property="og:url" content="https://example.com/projects" /> {/* Replace with your projects page URL */}
+        <meta property="og:type" content="website" />
+
+        
+      </Helmet>
       <motion.h1 className='head-text' 
       variants={itemVariant}
       >My<span className='font-semibold blue-gradient_text drop-shadow'> Projects</span></motion.h1>
@@ -108,7 +128,8 @@ const Projects = () => {
                   {project.description}
                 </p>
                 <motion.div className='mt-5 flex items-center gap-2 font-poppins'>
-                  <Link to={project.link} target='_blank' rel='noopener noreferer' className='font-semibold text-blue-600'
+                  <Link 
+                  to={project.link} target='_blank' rel='noopener noreferer' className='flex flex-row items-center justify-center gap-3 font-semibold text-blue-600'
                    
                   >
                   <motion.p
@@ -120,13 +141,14 @@ const Projects = () => {
                     color:"green"
                   }}
                   >{project.type=="live"?"Live Link":"Source Code"}</motion.p>
-                  </Link>
                   <img
                   src={arrow}
                   alt='arrow'
-                  className='w-4 h-10 object-contain'
+                  className='w-4 h-10 object-contain hover:scale-110'
+
                 
                   />
+                  </Link>
                 </motion.div>
 
               </div>

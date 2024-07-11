@@ -200,7 +200,7 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: thread,
+        iconUrl: threads,
         theme: 'btn-back-blue',
         name: "Latest Portfolio website made in Next JS",
         description: 'This is my latest Portfolio website which showcases my latest skillsets and TechStacks that I use.',

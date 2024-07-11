@@ -200,6 +200,23 @@ export const socialLinks = [
 
 export const projects = [
     {
+        iconUrl: thread,
+        theme: 'btn-back-blue',
+        name: "Latest Portfolio website made in Next JS",
+        description: 'This is my latest Portfolio website which showcases my latest skillsets and TechStacks that I use.',
+        link: 'https://sumit-kumar-jhaldiyal.vercel.app',
+        type:"live"
+    },
+     {
+        iconUrl: fav,
+        theme: 'btn-back-orange',
+        name: "Clients Portfolio Website with Integrated Appointment Scheduling",
+        description: 'Engineered a client portfolio and e-commerce site with features like appointment scheduling, book sales, and testimonials, increasing client bookings by 30%',
+        link: 'https://client-s-port-folio-dy20i9yqr-sumit-kumar-jhaldiyals-projects.vercel.app',
+        type:"live"
+    
+    },
+    {
         iconUrl: pricewise,
         theme: 'btn-back-red',
         name: 'PRODUCT RECOMMENDATION SYSTEM',
@@ -278,6 +295,8 @@ export const projects = [
         description: 'This is a python based LMS which is command-line and my first python based project',
         link: 'https://github.com/racxam/Python-based-Library-management-system',
         type:"src"
-    }
+    },
+
+   
     
 ];
